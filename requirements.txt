@@ -1,0 +1,14 @@
+# gNMI Collector Dependencies
+
+# Core gNMI library
+pygnmi>=0.8.13
+
+# Configuration and data handling
+PyYAML>=6.0.1
+
+# Async support (included in Python 3.7+, but listed for reference)
+# asyncio is part of Python standard library
+
+# Optional: For enhanced logging and monitoring
+# influxdb-client>=1.36.0  # If storing to InfluxDB
+# prometheus-client>=0.17.0  # If exposing Prometheus metrics

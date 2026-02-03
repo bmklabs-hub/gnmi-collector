@@ -1,0 +1,23 @@
+# gNMI paths for SONiC platform
+# Telemetry paths for interface, LLDP, and ARP data
+
+platform: sonic
+
+paths:
+  interface:
+    - /sonic-port:sonic-port/PORT/PORT_LIST
+    - /sonic-port:sonic-port/PORT_TABLE/PORT_TABLE_LIST
+    - /openconfig-interfaces:interfaces/interface/state/counters
+    - /openconfig-interfaces:interfaces/interface/state/oper-status
+    - /openconfig-interfaces:interfaces/interface/state/admin-status
+    - /openconfig-interfaces:interfaces/interface/state/name
+    
+  lldp:
+    - /sonic-lldp:sonic-lldp/LLDP_NEIGHBOR/LLDP_NEIGHBOR_LIST
+    - /sonic-lldp:sonic-lldp/LLDP_PORT/LLDP_PORT_LIST
+    - /openconfig-lldp:lldp/interfaces/interface/neighbors/neighbor/state
+    
+  arp:
+    - /sonic-neighbor:sonic-neighbor/NEIGH_TABLE/NEIGH_TABLE_LIST
+    - /openconfig-if-ip:interfaces/interface/subinterfaces/subinterface/ipv4/neighbors/neighbor/state
+    - /openconfig-if-ip:interfaces/interface/subinterfaces/subinterface/ipv6/neighbors/neighbor/state

@@ -1,0 +1,27 @@
+# gNMI Device Configuration
+# Configure your network devices for gNMI subscription
+
+devices:
+  - name: ceos-device-01
+    host: 192.168.1.10
+    port: 6030
+    username: admin
+    password: admin
+    platform: ceos
+    insecure: true
+    skip_verify: true
+
+  - name: sonic-device-01
+    host: 192.168.1.20
+    port: 8080
+    username: admin
+    password: password
+    platform: sonic
+    insecure: true
+    skip_verify: true
+
+# Subscription configuration
+subscription:
+  mode: STREAM
+  encoding: JSON_IETF
+  sample_interval: 10  # seconds
