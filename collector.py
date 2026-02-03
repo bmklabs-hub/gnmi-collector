@@ -169,7 +169,7 @@ class GNMICollector:
             try:
                 client.close()
                 logger.info(f"Closed connection to {device_name}")
-            except:
+            except Exception:
                 pass
     
     async def run(self):

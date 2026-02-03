@@ -19,6 +19,5 @@ paths:
     - /lldp/state
     
   arp:
-    - /network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/afi-safis/afi-safi/ipv4-unicast/neighbors
     - /interfaces/interface/subinterfaces/subinterface/ipv4/neighbors/neighbor/state
     - /interfaces/interface/subinterfaces/subinterface/ipv6/neighbors/neighbor/state
