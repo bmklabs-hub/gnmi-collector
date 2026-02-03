@@ -1,0 +1,23 @@
+# gNMI paths for Arista cEOS platform
+# Telemetry paths for interface, LLDP, and ARP data
+
+platform: ceos
+
+paths:
+  interface:
+    - /interfaces/interface/state/counters
+    - /interfaces/interface/state/oper-status
+    - /interfaces/interface/state/admin-status
+    - /interfaces/interface/ethernet/state/counters
+    - /interfaces/interface/state/name
+    - /interfaces/interface/state/type
+    - /interfaces/interface/state/mtu
+    
+  lldp:
+    - /lldp/interfaces/interface/neighbors/neighbor/state
+    - /lldp/interfaces/interface/state
+    - /lldp/state
+    
+  arp:
+    - /interfaces/interface/subinterfaces/subinterface/ipv4/neighbors/neighbor/state
+    - /interfaces/interface/subinterfaces/subinterface/ipv6/neighbors/neighbor/state
